@@ -1,19 +1,22 @@
 import React from "react";
 
-function Header({ handleCompile }) {
+function Header({ checked }) {
+  const handleCheck = (e) => {
+    const value = e.target.checked;
+    e.target.checked = !value;
+    checked(!value);
+  };
   return (
-    <div>
+    <header className="header">
       <div className="logo">Markdown Editor</div>
       <div className="button">
         <div className="check">
-          <label htmlFor="live"></label>
-          <input type="checkbox" id="live"></input>
+          <input onClick={handleCheck} type="checkbox" id="live"></input>
+          <label htmlFor="live">Live Preview</label>
         </div>
-        <button id="compile" onClick={handleCompile}>
-          Compile
-        </button>
+        <button id="compile">Compile</button>
       </div>
-    </div>
+    </header>
   );
 }
 

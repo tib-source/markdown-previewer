@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import marked from "marked";
 
-function CodeEditor({ handleType }) {
+function CodeEditor(props) {
+  const [markdown, setMarkdown] = useState("");
+  const preview = document.querySelector("#preview");
+
+  const handleCompile = (code) => {
+    const rendered = marked(code);
+    console.log(preview);
+    setMarkdown(rendered);
+  };
+
+  const handleType = (e) => {
+    const code = e.target.value;
+    handleCompile(code);
+  };
+
   return (
-    <div>
+    <div className="container">
       <div className="editor">
-        <textarea
-          onChange={handleType}
-          name="editor"
-          id="editor"
-          cols="30"
-          rows="10"
-        ></textarea>
+        <textarea onInput={handleType} name="editor" id="editor"></textarea>
       </div>
       <div className="rendered">
-        <div id="preview"></div>
+        <div id="preview" dangerouslySetInnerHTML={{ __html: markdown }}></div>
       </div>
     </div>
   );

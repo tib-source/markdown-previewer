@@ -1,0 +1,45 @@
+@import 'globals';
+
+
+.header{
+  flex: 0 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  gap: 2em;
+}
+.container{
+  width: 100vw;
+  flex: 1 1 auto;
+  display: flex;
+  background-color: rgba(#afb1b3, 0.3);
+  padding: 1em;
+  gap: 1em;
+  
+  .editor{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    textarea{
+      padding: 1em;
+      width: 100%;
+      height: 100%;
+      font-size: 15px;
+      border-radius: 5px;
+      overflow: auto;
+    }
+
+
+  }
+  .rendered{ 
+    flex:1;
+    padding: 0 1em;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    border-radius: 5px;
+    overflow: auto;
+  }
+}

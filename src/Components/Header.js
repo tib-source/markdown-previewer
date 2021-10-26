@@ -9,7 +9,7 @@ function Header({ checked }) {
   return (
     <header className="header">
       <div className="logo">Markdown Editor</div>
-      <div className="button">
+      <div className="buttons">
         <div className="check">
           <input onClick={handleCheck} type="checkbox" id="live"></input>
           <label htmlFor="live">Live Preview</label>

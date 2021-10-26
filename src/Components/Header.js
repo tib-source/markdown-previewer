@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(props) {
+function Header({ handleCompile }) {
   return (
     <div>
       <div className="logo">Markdown Editor</div>
@@ -9,7 +9,9 @@ function Header(props) {
           <label htmlFor="live"></label>
           <input type="checkbox" id="live"></input>
         </div>
-        <button id="compile">Compile</button>
+        <button id="compile" onClick={handleCompile}>
+          Compile
+        </button>
       </div>
     </div>
   );

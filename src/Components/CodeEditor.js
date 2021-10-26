@@ -1,10 +1,16 @@
 import React from "react";
 
-function CodeEditor(props) {
+function CodeEditor({ handleType }) {
   return (
     <div>
       <div className="editor">
-        <textarea name="editor" id="editor" cols="30" rows="10"></textarea>
+        <textarea
+          onChange={handleType}
+          name="editor"
+          id="editor"
+          cols="30"
+          rows="10"
+        ></textarea>
       </div>
       <div className="rendered">
         <div id="preview"></div>

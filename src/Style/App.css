@@ -3,13 +3,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
-  overflow-y: overlay;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
   font-size: 1em;
   width: 100%;
   height: 100vh;
@@ -79,6 +78,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: rgba(175, 177, 179, 0.3);
+  gap: 1em;
+  padding: 1em;
 }
 
 .container .editor {
@@ -95,7 +96,6 @@ body {
   height: 100%;
   font-size: 15px;
   border-radius: 5px;
-  overflow: scroll;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -113,8 +113,9 @@ body {
   height: 100%;
   background-color: rgba(175, 177, 179, 0.1);
   border-radius: 5px;
-  overflow: scroll;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 0em 1em;
+  overflow-y: overlay;
 }
 /*# sourceMappingURL=App.css.map */

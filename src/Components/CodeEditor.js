@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import marked from "marked";
+import INITIAL from "./Constants/initialMarkdown";
 
+marked.setOptions({
+  breaks: true,
+});
 function CodeEditor(props) {
-  const [markdown, setMarkdown] = useState("");
+  const [markdown, setMarkdown] = useState(marked(INITIAL));
   const preview = document.querySelector("#preview");
-
+  useEffect(() => {
+    document.querySelector("#editor").value = INITIAL;
+  }, []);
   const handleCompile = (code) => {
     const rendered = marked(code);
     console.log(preview);
@@ -22,7 +28,10 @@ function CodeEditor(props) {
         <textarea onInput={handleType} name="editor" id="editor"></textarea>
       </div>
       <div className="rendered">
-        <div id="preview" dangerouslySetInnerHTML={{ __html: markdown }}></div>
+        <code
+          id="preview"
+          dangerouslySetInnerHTML={{ __html: markdown }}
+        ></code>
       </div>
     </div>
   );

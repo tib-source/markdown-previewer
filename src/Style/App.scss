@@ -56,10 +56,11 @@
     box-sizing: border-box;
     flex: 1;
     height: 100%;
-    background-color: rgba(#afb1b3, 0.1);
+    background-color: rgba(wheat, 0.1);
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
     padding: 0em 1em;
     overflow-y: overlay;
+    overflow-x: none;
   }
 }

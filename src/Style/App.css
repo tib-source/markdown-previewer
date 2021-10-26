@@ -5,6 +5,24 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -111,11 +129,12 @@ body {
       -ms-flex: 1;
           flex: 1;
   height: 100%;
-  background-color: rgba(175, 177, 179, 0.1);
+  background-color: rgba(245, 222, 179, 0.1);
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: 0em 1em;
   overflow-y: overlay;
+  overflow-x: none;
 }
 /*# sourceMappingURL=App.css.map */
